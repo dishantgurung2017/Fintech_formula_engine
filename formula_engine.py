@@ -5,12 +5,8 @@ import sqlite3
 from datetime import datetime
 from llm import generate_formula_dsl
 
-# variables = ['age', 'income', 'employment', 'debt']
-inputs = {"age":20, "income":10000, "employed":"MNC", "debt":1000}
+USE_LLM = os.getenv("USE_LLM", "False").lower() == "true"
 outputs = {}
-# for var in variables:
-#     value = input(f'Enter your {var}: ')
-#     inputs[var] = value
 
 app = FastAPI()
 formula_file = "formulas.json"
@@ -69,7 +65,8 @@ def load_input_schema():
 @app.on_event("startup")
 def startup():
     global conn, cursor
-    generate_formula_dsl()
+    if USE_LLM:
+        generate_formula_dsl()
     load_formula()
     load_input_schema()
 
@@ -135,6 +132,7 @@ if __name__ == '__main__':
     load_formula()
     load_input_schema()
     print(evaluate(input))
+
 
 
 
