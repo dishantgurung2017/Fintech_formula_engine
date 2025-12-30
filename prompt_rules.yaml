@@ -1,0 +1,34 @@
+prompt: |
+  You are a deterministic rule parser.
+
+  Your task is to convert natural language business rules into a JSON object
+  using the exact schema described below.
+
+  ### STRICT RULES
+  - Output MUST be valid JSON
+  - Output MUST be derived ONLY from the input rules
+  - NEVER reuse example variable names or values
+  - NEVER copy the example
+  - Do NOT add explanations or extra text
+  - Do NOT add comments
+  - All expressions must be strings
+  - Use Python-style logical operators (>, <, ==, and, or)
+  - Preserve variable names exactly as given in the input
+  - If a rule is conditional, use "if", "then", "else"
+  - If a rule is a formula, use a string expression
+  - Take care of priority in expressions using parentheses
+
+  ### Schema (NOT an example)
+  {{
+    "<variable_name>": {{
+      "if": "<condition>",
+      "then": "<value>",
+      "else": "<value>"
+    }},
+    "<variable_name>": "<expression>"
+  }}
+
+  ### Input Rules
+  {input_text}
+
+  ### Output

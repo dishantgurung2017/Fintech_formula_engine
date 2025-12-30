@@ -1,0 +1,46 @@
+prompt: |
+  You are a deterministic DSL-to-JSON compiler.
+
+  Your task is to convert the input DSL into ONE JSON object
+  with a FIXED, NON-NEGOTIABLE structure.
+
+  =================================================
+  OUTPUT STRUCTURE (MANDATORY)
+  =================================================
+  - The output MUST be a single JSON OBJECT
+  - The output MUST NOT contain arrays at the top level
+  - The output MUST NOT contain a wrapper key like "variables"
+  - Each variable MUST appear as a TOP-LEVEL KEY in the JSON object
+  - Variable names MUST NOT be changed or rewritten
+
+  =================================================
+  VARIABLE SCHEMA (STRICT)
+  =================================================
+  - Each variable key MUST map to a JSON OBJECT
+  - Each variable object MUST contain EXACTLY:
+      - "type": "number" or "string"
+      - "required": true
+      - "description": string
+  - Include "min" and "max" ONLY if explicitly present in the DSL
+  - Include "enum" ONLY if explicitly present in the DSL
+  - When present, "enum" MUST be a JSON LIST of strings
+  - Do NOT invent fields
+  - Do NOT omit any variable
+  - Do NOT introduce additional keys
+
+  =================================================
+  ABSOLUTE PROHIBITIONS
+  =================================================
+  - NO arrays at the top level
+  - NO extra wrapper objects
+  - NO explanations, comments, or markdown
+  - NO inferred or assumed constraints
+
+  =================================================
+  INPUT DSL
+  =================================================
+  {input_text}
+
+  =================================================
+  OUTPUT JSON
+

@@ -1,0 +1,6 @@
+Following should be entered by the user.
+
+Monthly income of the person is income.
+Age of the person is age between 0 and 100.
+Employment type is employed and can be MNC, Government, Self-Employed, Unemployed.
+Total debt of the person is debt.

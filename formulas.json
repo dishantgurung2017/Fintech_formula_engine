@@ -1,0 +1,10 @@
+{
+    "credit_score": {
+        "if": "income > 40000 and debt < 100000",
+        "then": "900",
+        "else": "200"
+    },
+    "risk_assessment":"(1 - credit_score / 900) * 0.5 + debt_to_income * 0.3 + delinquency_count * 0.2",
+    "eligibility_rule": "employment_type == 'MNC' and age > 20 and age < 60 and income > 25000 and credit_score > 600"
+
+}

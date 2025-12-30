@@ -1,0 +1,30 @@
+{
+    "income": {
+        "type": "number",
+        "required": true,
+        "description": "Monthly income of the person"
+    },
+    "age": {
+        "type": "number",
+        "required": true,
+        "description": "Age of the person between 0 and 100",
+        "min": 0,
+        "max": 100
+    },
+    "employment_type": {
+        "type": "string",
+        "required": true,
+        "description": "Employment type",
+        "enum": [
+            "MNC",
+            "Government",
+            "Self-Employed",
+            "Unemployed"
+        ]
+    },
+    "debt": {
+        "type": "number",
+        "required": true,
+        "description": "Total debt of the person"
+    }
+}

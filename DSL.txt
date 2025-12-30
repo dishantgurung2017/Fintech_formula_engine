@@ -1,0 +1,3 @@
+For calculating credit score, if income is greater than 40000 and debt is less than 100000 then credit score will be 900 otherwise 300.
+Risk assessment is equal to product of credit score and 100 subtracted by 200 then add 100.
+Eligibility rule is employment_type=='MNC' and age>20 and age<60 and income>25000 and credit_score>600
