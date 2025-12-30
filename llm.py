@@ -45,31 +45,26 @@ def generate_json_from_prompt(generator, prompt_path, dsl_text):
     return json.loads(json_text)
 
 def generate_formula_dsl():
-    # 1. Read DSL
     with open("DSL.txt", "r", encoding="utf-8") as f:
         dsl_text = f.read()
 
     with open("input.txt", "r", encoding="utf-8") as f:
         input_text = f.read()
 
-    # 2. Load LLM once
     generator = load_llm()
 
-    # 3. Generate input_schema
     input_schema = generate_json_from_prompt(
         generator,
         prompt_path="prompt_input_schema.yaml",
         dsl_text=input_text
     )
 
-    # 4. Generate rules
     rules = generate_json_from_prompt(
         generator,
         prompt_path="prompt_rules.yaml",
         dsl_text=dsl_text
     )
 
-    # 6. Persist
     with open("formulas.json", "w", encoding="utf-8") as f:
         json.dump(rules, f, indent=4)
 
