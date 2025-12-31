@@ -5,3 +5,4 @@ With LLM(natural language to JSON, GPU RECOMMENDED):
 ``` USE_LLM=True uvicorn formula_engine:app --port 8000 ```
 
 Non-engineers (risk team, finance analysts, product managers) can write the rules for calculating metrics in DSL.txt and variables that need to be given by the user in input.txt.(REFERENCE IS PROVIDED).
+<h1>Note:</h1>  Rules cannot be changed in DSL.txt after formula_engine is started. Instead formula.json can be modified.
