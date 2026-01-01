@@ -1,6 +1,10 @@
-Start formula engine using:-
-Wihout LLM(Write rules directly on formulas.json):
+<h1>How to Start the Formula Engine</h1>
+<h2>Without LLM (Rules written directly in formulas.json)</h2>
+Use this mode when formulas are already defined in JSON.
 ``` uvicorn formula_engine:app --port 8000 ```
+<h2>With LLM (Natural Language → JSON)</h2>
+Recommended when non-engineers want to define rules using plain English.
+GPU is recommended for this mode.
 With LLM(natural language to JSON, GPU RECOMMENDED):
 ``` USE_LLM=True uvicorn formula_engine:app --port 8000 ```
 
