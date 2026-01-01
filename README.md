@@ -1,13 +1,15 @@
-<h1>How to Start the Formula Engine</h1>
-<h2>Without LLM (Rules written directly in formulas.json)</h2>
+# How to Start the Formula Engine
+## Without LLM (Rules written directly in formulas.json)
 Use this mode when formulas are already defined in JSON.
-``` uvicorn formula_engine:app --port 8000 ```
+```bash
+uvicorn formula_engine:app --port 8000 
 
-<h2>With LLM (Natural Language → JSON)</h2>
+## With LLM (Natural Language → JSON)
 Recommended when non-engineers want to define rules using plain English.
 GPU is recommended for this mode.
 With LLM(natural language to JSON, GPU RECOMMENDED):
-``` USE_LLM=True uvicorn formula_engine:app --port 8000 ```
+```bash
+USE_LLM=True uvicorn formula_engine:app --port 8000
 
 <h1>Designed for Non-Engineers</h1>
 <h2>DSL.txt</h2>
