@@ -22,8 +22,8 @@ Rules in DSL.txt cannot be changed after the engine starts
 formulas.json can be modified at runtime
 This ensures deterministic execution and avoids inconsistent rule evaluation
 
-<h1>How to Use the API (Step-by-Step)</h1>
-<h2>Step 1️ – Open the API Interface</h2>
+# How to Use the API (Step-by-Step)
+## Step 1️ – Open the API Interface
 Once the server starts, open your browser and go to:```http://localhost:8000/docs```
 This opens the Swagger UI.
 <img width="1872" height="540" alt="Screenshot 2026-01-01 161000" src="https://github.com/user-attachments/assets/2f88fe1d-afbc-4766-aa9a-ac7173178f0d" />
