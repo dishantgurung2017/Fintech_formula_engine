@@ -16,3 +16,6 @@ Click on get end-point to get the input schema that should be followed by the us
 Enter the inputs in the manner shown above. Then click execute.
 <img width="1646" height="189" alt="Screenshot 2026-01-01 162207" src="https://github.com/user-attachments/assets/470002ae-8327-484c-b436-7927c5ae47c4" />
 This is how the output looks like.
+<h1>Architecture Overview</h1>
+
+<img width="388" height="432" alt="Screenshot 2026-01-01 163918" src="https://github.com/user-attachments/assets/5f719d3e-2769-4b9e-a844-5c6157bd235b" />
