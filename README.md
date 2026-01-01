@@ -2,7 +2,7 @@
 ## Without LLM (Rules written directly in formulas.json)
 Use this mode when formulas are already defined in JSON.
 ```bash
-uvicorn formula_engine:app --port 8000 
+uvicorn formula_engine:app --port 8000 ```
 
 ## With LLM (Natural Language → JSON)
 Recommended when non-engineers want to define rules using plain English.
