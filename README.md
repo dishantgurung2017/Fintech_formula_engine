@@ -43,5 +43,5 @@ The engine evaluates all configured formulas and returns the calculated metrics.
 <img width="1646" height="189" alt="Screenshot 2026-01-01 162207" src="https://github.com/user-attachments/assets/470002ae-8327-484c-b436-7927c5ae47c4" />
 
 <h1>Architecture Overview</h1>
+<img width="386" height="333" alt="image" src="https://github.com/user-attachments/assets/19ffaa19-4981-48d2-8786-e64e02c47df2" />
 
-<img width="388" height="432" alt="Screenshot 2026-01-01 163918" src="https://github.com/user-attachments/assets/5f719d3e-2769-4b9e-a844-5c6157bd235b" />
